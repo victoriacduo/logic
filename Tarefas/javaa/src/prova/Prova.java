@@ -92,7 +92,7 @@ public class Prova {
 		int qnt = 3;	
 		
 		String[] material = {"Lantejoula", "Penas de Avestruz do Himalaia", "Tecido de seda Húngara"};
-		int[] gasto = new int[qnt];
+		int[] gasto = new int[qnt]; 
 		
 		for(int i = 0; i < qnt; i++) {
 			System.out.println("Digite os quilos de " + material[i] + " utilizado: ");
