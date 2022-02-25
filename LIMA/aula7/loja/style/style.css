@@ -15,9 +15,8 @@ a{
     align-items: center;
     text-decoration: none;
     color: rgb(49, 49, 49);
-    height: 70%;
+    height: 100%;
     width: 80px;
-    background-color: #fff;
     padding: 0 15px;
 }
 
@@ -48,6 +47,10 @@ header{
 
 header img{
     height: 40%;
+}
+
+.logo{
+    height: 80%;
 }
 
 .login{
@@ -140,9 +143,24 @@ content{
 }
 
 .image{
+    opacity: .6;
     height: 200px;
     width: 200px;
+}
+
+
+.image:hover{
+    opacity: 1;
+    transition: .5s;
+}
+
+.name{
+    display: flex;
     background-color: rgb(235, 204, 219);
+    height: 25px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
