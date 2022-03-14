@@ -1,24 +1,26 @@
 package modelo;
 
 public class Nota {
-
-	public static void main(String[] args) {
-		float notas[];
-		notas =  new int[3];
-		
-		obterMedia();
-		paraString();
-
+	
+	public String componente;
+	public float[] notas =  new float[3];
+	
+	public Nota() {
+		// TODO Auto-generated constructor stub
 	}
-
-	private static void obterMedia() {
-		// TODO Auto-generated method stub
-		
+	
+	public Nota(String componente, float[] notas) {
+		this.componente = componente;
+		this.notas = notas;
 	}
-
-	private static void paraString() {
-		// TODO Auto-generated method stub
+	
+	public float obterMedia() {
+		float soma = 0;
+		for (int i = 0; i < notas.length; i++) {
+			soma += notas[i];
+		}
 		
+		return soma/notas.length;
 	}
 
 }

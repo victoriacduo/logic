@@ -1,36 +1,25 @@
 package modelo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Aluno {
 	
-	public static void main(String[] args) {
+		public int ra;
+		public String name;
+		public Date nascimento;
+		public int notas;
 		
-		int ra;
-		String name;
-		Date nascimento;
-		int notas[];
-		notas = new int[4]; 
+		public Aluno() {}
 		
-		calcIdade();
-		obterConceito();
-		paraString();
+		public Aluno(int ra, String name, Date nascimento, int notas) {
+			this.ra = ra;
+			this.name =  name;
+			this.nascimento = nascimento;
+			this.notas = notas;
+		}
 		
-	}
-
-	private static void calcIdade() {
-		
-		
-	}
-
-	private static void obterConceito() {
-		
-		
-	}
-
-	private static void paraString() {
-		
-		
-	}
-
+		public String tabular() {
+			return ra+"\t"+name+"\t"+nascimento+"\t"+notas;
+		}
+	
 }
