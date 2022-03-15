@@ -1,6 +1,7 @@
 package visao;
 
 import java.text.ParseException;
+
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
@@ -70,7 +71,6 @@ public class Principal {
 			alunos[i].ra = input.nextInt();
 			alunos[i].name = input.next();
 			alunos[i].nascimento = df.parse(input.next());
-			alunos[i].notas = input.nextInt();
 		}
 		
 	}
@@ -111,3 +111,30 @@ public class Principal {
 	}
 
 }
+
+//for(int i = 0; i < alunos.length; i++) {
+//	if(alunos[9] == null)
+//		if(alunos[i] == null) {
+//			System.out.println("Digite o nome do aluno: ");
+//			String nome = input.next();
+//			
+//			System.out.println("");
+//			String age = input.next();
+//			Date nascimento = new SimpleDateFormat("dd/MM/yyyy").parse(age);
+//			
+//			int ra = i+1;
+//			
+//			alunos[i] = new Aluno(ra, nome, nascimento);
+//		} else {
+//			System.out.println("Apenas dez alunos por vez.");
+//		}
+
+//float media = 0;
+//for (int i = 0; i < notas.length; i++) {
+//	media += notas[i];
+//}
+//
+//return media/notas.length;
+//}
+//
+//}
