@@ -9,7 +9,7 @@ import java.util.Scanner;
 import modelo.Aluno;
 import modelo.Nota;
 
-		public class Main {
+		public class Principal {
 	
 			public static Scanner input = new Scanner(System.in);
 			public static int opcao = 0;
