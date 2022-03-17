@@ -1,15 +1,14 @@
 package modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import modelo.Nota;
 
 public class Aluno {
 	
 		public int ra;
 		public String name;
 		public Date nascimento;
-		public Notas[] notas = new Notas[4];
+		public Nota[] notas = new Nota[4];
 		
 		public Aluno() {}
 		
@@ -19,13 +18,8 @@ public class Aluno {
 			this.nascimento = nascimento;
 		}
 		
-		public String tabular() {
-			
-			return ra+"\t"+name+"\t"+nascimento;
-			
-		}
-		
-		public int caclIdade() {
+		@SuppressWarnings("deprecation")
+		public int calcIdade() {
 			
 			Date now = new Date();
 			
@@ -47,31 +41,47 @@ public class Aluno {
 		
 		public String obterConceito() {
 			
+			String s = null;
+			
 			boolean aprovado = true;
 			
 			for(int i = 0; i < notas.length; i++) {
 				
-				
+				if(notas[i].obterMedia() <= 50) {
+					aprovado = false;
+					break;
 					
 				}
+				
+					
 			}
 			
+			if(aprovado) {
+				
+				s = "Aluno aprovado.";
+				
+			} else {
+				
+				s = "Aluno reprovado.";
+				
+			}
 			
+			return s;
+			
+			}
+			
+		public String paraString() {
+			String aluno = ra + "\t" + name + "\t" + new SimpleDateFormat("dd/MM/yyyy").format(nascimento);
+			String notinhas = "";
+			
+			for (int i = 0; i < notas.length; i++) {
+				if(notas[i] != null) {
+					notinhas = notinhas + "\t" +  notas[i].obterMedia();
+				}
+				
+			}
+			
+			return aluno + notinhas;
+		}
 			
 	}
-
-
-// se o mes atual for maior que o mes de nascimento 
-// retorna o mes atual - o mes de nascimento
-
-// se n, retorna ano atual - ano de nascimento - 1 ????
-
-// n da pra fazer conta com string
-// ent precisa converter pra uma variavel do tipo Date 
-// essa variavel tem algumas funções 
-// por ex: getMonth retorna o numero do mes
-// a variavel data tem o valor 14/03/2022 
-// entao se colocar int mes = data(variavel).getMonth(função)
-// o mes vai ter valor 3, q é o numero do mes 
-// isso vale pra ano também 
-// ele retorna o numero pra poder calcular
