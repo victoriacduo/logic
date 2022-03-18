@@ -46,14 +46,13 @@ public class Aluno {
 			boolean aprovado = true;
 			
 			for(int i = 0; i < notas.length; i++) {
-				
-				if(notas[i].obterMedia() <= 50) {
-					aprovado = false;
-					break;
-					
+				if (notas[i] != null) {
+					if(notas[i].obterMedia() <= 50) {
+						aprovado = false;
+						break;
+						
+					}
 				}
-				
-					
 			}
 			
 			if(aprovado) {

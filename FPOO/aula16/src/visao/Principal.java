@@ -117,8 +117,8 @@ import modelo.Nota;
 							for (int j = 0; j < aluno[i].notas.length; j++) {
 								System.out.println("Digite o nome da matéria: ");
 								String materia = input.next();
+								System.out.println("Digite três notas: ");
 									for (int k = 0; k < 3; k++) {
-										System.out.println("Digite as notas: ");
 										nota[k] = input.nextFloat();
 						}
 						
@@ -222,7 +222,7 @@ import modelo.Nota;
 				if (aluno[i] != null && aluno[i].obterConceito().equals("Aluno aprovado.")) {
 				
 					System.out.println(aluno[i].name);
-					System.out.println("\tMatéria.\tNota 1\tNota 2\tNota 3\tMédia\n");
+					System.out.println("\tMatéria\tNota 1\tNota 2\tNota 3\tMédia\n");
 					
 					for (int j = 0; j < aluno[i].notas.length; j++) {
 						if (aluno[i].notas[j] != null) {
@@ -242,7 +242,7 @@ import modelo.Nota;
 				System.out.println(aluno[i].obterConceito());
 				System.out.println("\n");
 				
-				}
+				} 
 			}
 		
 		}
@@ -255,7 +255,7 @@ import modelo.Nota;
 				if (aluno[i] != null && aluno[i].obterConceito().equals("Aluno reprovado.")) {
 				
 				System.out.println(aluno[i].name);
-				System.out.println("\tMatéria.\tNota 1\tNota 2\tNota 3\tMédia\n");
+				System.out.println("\tMatéria\tNota 1\tNota 2\tNota 3\tMédia\n");
 				
 				for (int j = 0; j < aluno[i].notas.length; j++) {
 					if (aluno[i].notas[j] != null) {
