@@ -14,7 +14,7 @@ public class Ex2 {
 		// valor na matriz e, ao final, escrever a localização (linha e coluna)
 		// ou uma mensagem de "nao encontrado".
 
-		int[][] vetor = new int[5][5];
+		int[][] matriz = new int[5][5];
 		int x;
 		int y = 0;
 
@@ -23,13 +23,13 @@ public class Ex2 {
 
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				vetor[i][j] = new Random().nextInt(100);
+				matriz[i][j] = new Random().nextInt(100);
 			}
 		}
 
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				System.out.printf("%2d \t", vetor[i][j]);
+				System.out.printf("%2d \t", matriz[i][j]);
 			}
 
 			System.out.printf("%n");
@@ -38,15 +38,15 @@ public class Ex2 {
 
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				if (x == vetor[i][j]) {
-					y = vetor[i][j];
+				if (x == matriz[i][j]) {
+					y = matriz[i][j];
 
 					System.out.println("Coluna: " + j + "\tLinha: " + i);
 				}
 			}
 
 		}
-		
+
 		if (x != y) {
 			System.out.println("Não encontrado.");
 		}

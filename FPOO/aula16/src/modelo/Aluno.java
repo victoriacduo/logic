@@ -10,11 +10,8 @@ public class Aluno {
 		public int ra;
 		public String name;
 		public Date nascimento;
-<<<<<<< HEAD
-		public Notas[] notas = new Notas[4];
-=======
+
 		public Nota[] notas = new Nota[4];
->>>>>>> 679ff73f9396a784f3617e50bac77f7803045ae9
 		
 		public Aluno() {}
 		
@@ -22,12 +19,7 @@ public class Aluno {
 			this.ra = ra;
 			this.name =  name;
 			this.nascimento = nascimento;
-<<<<<<< HEAD
-			
-=======
->>>>>>> 679ff73f9396a784f3617e50bac77f7803045ae9
-		}
-		
+
 		@SuppressWarnings("deprecation")
 		public int calcIdade() {
 			
@@ -92,7 +84,7 @@ public class Aluno {
 			
 			return aluno + notinhas;
 		}
-<<<<<<< HEAD
+
 		
 		public int calcIdade() {
 			java.util.Date hoje = new java.util.Date();  
@@ -112,7 +104,7 @@ public class Aluno {
 		
 		public String obterConceito() {
 			boolean aprovado = true;
-			for (int i = 0; i < nota.length; i++) {
+			for (int i = 0; i < notas.length; i++) {
 				
 				if(notas[i].obterMedia() <= 50) {
 					aprovado = false;
@@ -120,14 +112,10 @@ public class Aluno {
 				}
 			}
 			if (aprovado) {
-				return "Aluno(a) " + nome + " foi APROVADO!";
+				return "Aluno " + name + " foi aprovado!";
 			} else {
-				return "Aluno(a) " + nome + " foi REPROVADO!";
+				return "Aluno " + name + " foi reprovado!";
 			}
 		}
 	
 }
-=======
-			
-	}
->>>>>>> 679ff73f9396a784f3617e50bac77f7803045ae9
