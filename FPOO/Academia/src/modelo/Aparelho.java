@@ -1,18 +1,16 @@
 package modelo;
 
-import java.util.Date;
-
 public class Aparelho {
 
 	public String nome;
 	public String tipoExercicio;
 	public String grupoMuscular;
-	public Date dataAquisicao;
+	public String dataAquisicao;
 	public Double valorAquisicao;
 	
 	public Aparelho() {}
 	
-	public Aparelho(String nome, String tipoExercicio, String grupoMuscular, Date dataAquisicao, Double valorAquisicao) {
+	public Aparelho(String nome, String tipoExercicio, String grupoMuscular, String dataAquisicao, Double valorAquisicao) {
 		this.nome = nome;
 		this.tipoExercicio = tipoExercicio;
 		this.grupoMuscular = grupoMuscular;
@@ -26,6 +24,19 @@ public class Aparelho {
 		
 	}
 	
-	public 
+	public double depreciacao() {
+		return 0;
+	}
+	
+	public double valorDepreciacao() {
+		return 0;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Aparelho [nome=" + nome + ", tipoExercicio=" + tipoExercicio + ", grupoMuscular=" + grupoMuscular
+				+ ", dataAquisicao=" + dataAquisicao + ", valorAquisicao=" + valorAquisicao + "]";
+	}
 
 }
