@@ -8,7 +8,6 @@ public class Ex4 {
 		// 4 Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estao acima da diagonal principal.
 
 		int[][] matriz = new int [3][3];
-		int soma = 0;
 		
 		for(int i = 0; i < matriz.length; i++) {
 			for(int j = 0; j < matriz[0].length; j++) {
@@ -22,18 +21,10 @@ public class Ex4 {
 			}
 
 			System.out.println();
-		}
+		}	
 		
-		for(int i = 0; i < matriz.length; i++) {
-			for(int j = 0; j < matriz[0].length; j++) {
-				if(i == j) {
-					soma = soma + matriz[i][j];
-				}
-			}
-			
-		}
-		
-		System.out.println("aaaaaaa: " + soma);
+		int m = matriz[0][1] + matriz[1][2];
+		System.out.println("Soma da diagonal: " + m);
 		
 	}
 
