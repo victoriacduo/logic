@@ -6,7 +6,7 @@ public class Nota {
 	public float[] notas =  new float[3];
 	
 	public Nota() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public Nota(String componente, float[] notas) {

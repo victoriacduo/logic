@@ -70,7 +70,6 @@ public class Principal {
 			alunos[i].ra = input.nextInt();
 			alunos[i].name = input.next();
 			alunos[i].nascimento = df.parse(input.next());
-			alunos[i].notas = input.nextInt();
 		}
 		
 	}
