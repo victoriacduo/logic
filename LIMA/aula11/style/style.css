@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(238,238,238,255);
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border: 2px solid;
+    padding: 30px 40px;
+    margin-bottom: 40px;
+}
+
+.mar{
+    margin: -13%;
+    font-weight: bold;
+    font-size: 2.2vh;
+}
+
+.mar2{
+    color: red;
+    margin: -13%;
+}
+
+.mar3{
+    margin: -13%;
+    font-weight: bold;
+    font-size: 2.2vh;
+}
+
+.mar4{
+    color: green;
+    margin: -13%;
+}
+
+.mar5{
+    margin: -13%;
+    font-weight: bold;
+    font-size: 2.2vh;
+}
+
+.mar6{
+    color: blue;
+    margin: -13%;
+}
+
+.logo{
+    height: 80px;
+    width: 80px;
+}
+
+.buscar{
+    height: 50px;
+    width: 50px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left: 200px;
+    width: 1300px;
+}
+
+.teste{
+    display: flex;
+    flex-flow: row wrap;
+    width: 65vw;
+    height: 75vh;
+}
+
+.data{
+    width: 15vw;
+    margin-right: 100px; 
+}
+
+.imgNoticia{
+    height: 200px;
+    width: 300px;
+    margin-right: 25px;
+}
+
+.temasAlta{
+    height: 400px;
+    width: 300px;
+    background-color: #fff;
+    font-size: 20px;
+    margin: 10px 100px;
+}
+
+.temasAlta div{
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
