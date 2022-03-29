@@ -109,6 +109,7 @@ header{
     border-bottom: 1px solid rgb(87, 87, 87);
     margin: 30px;
     padding-bottom: 20px;
+<<<<<<< HEAD
 }
 
 @media (max-width: 700px) {
@@ -205,3 +206,6 @@ header{
 
 
 }
+=======
+}
+>>>>>>> 2f88e122af92f6090f6260d81e14f7cb13c8d33a
