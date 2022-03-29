@@ -1,64 +1,67 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(238,238,238,255);
+    font-size: 20px;
+    background-color: #eeeeee;
 }
 
 header{
     display: flex;
     justify-content:space-between;
-    align-items: center;
-    border: 2px solid;
-    padding: 30px 40px;
-    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    margin: 30px;
+}
+
+.nota{
+    margin-top: 40px;
+   font-weight: bold;
 }
 
 .mar{
-    margin: -13%;
-    font-weight: bold;
-    font-size: 2.2vh;
+    margin-top: 40px;
+    color: rgb(190, 0, 0);
 }
 
 .mar2{
-    color: red;
-    margin: -13%;
+    margin-top: 40px;
+    color: rgb(1, 173, 1);
 }
 
 .mar3{
-    margin: -13%;
-    font-weight: bold;
-    font-size: 2.2vh;
-}
-
-.mar4{
-    color: green;
-    margin: -13%;
-}
-
-.mar5{
-    margin: -13%;
-    font-weight: bold;
-    font-size: 2.2vh;
-}
-
-.mar6{
-    color: blue;
-    margin: -13%;
+    margin-top: 40px;
+    color: rgb(1, 171, 187);
 }
 
 .logo{
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
+    padding-left: 20%;
+    padding-right: 30%;
 }
 
-.buscar{
-    height: 50px;
-    width: 50px;
+.busca{
+    background-color:#acacac;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+    height:30px;
+    margin-top: 30px;
+  }
+
+  .barraBuscar{
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 14px;
+    border: none;
+    height: 32px;
+    width: 260px;
+  }
+
+  .lupa{
+    height: 25px;
+    width: 25px;
+    padding-top: 3px; 
 }
 
 .main{
@@ -69,7 +72,7 @@ header{
     width: 1300px;
 }
 
-.teste{
+.noticias{
     display: flex;
     flex-flow: row wrap;
     width: 65vw;
@@ -88,14 +91,117 @@ header{
 }
 
 .temasAlta{
-    height: 400px;
-    width: 300px;
+    height: 460px;
+    width: 320px;
     background-color: #fff;
     font-size: 20px;
     margin: 10px 100px;
 }
 
-.temasAlta div{
-    padding: 20px;
-    border-bottom: 1px solid black;
+.emAlta{
+    border-bottom: 1px solid rgb(87, 87, 87);
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px
+}
+
+.sla{
+    border-bottom: 1px solid rgb(87, 87, 87);
+    margin: 30px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    margin: 30px;
+}
+
+.nota{
+    margin-right: 10px;
+   font-weight: bold;
+}
+
+.mar{
+    margin-right: 10px;
+    color: rgb(190, 0, 0);
+}
+
+.mar2{
+    margin-right: 10px;
+    color: rgb(1, 173, 1);
+}
+
+.mar3{
+    margin-top: 40px;
+    color: rgb(1, 171, 187);
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    padding-left: 20%;
+    padding-right: 30%;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-left: 50px;
+    width: 100px;
+}
+
+.noticias{
+    display: flex;
+    width: 100vw;
+    height: 105vh;
+}
+
+.data{
+    
+    width: 60vw;
+    
+}
+
+.imgNoticia{
+    height: 200px;
+    width: 300px;
+    margin-right: 25px;
+}
+
+.temasAlta{
+    position: absolute;
+    top: 1500px;
+    left: -30px;
+    height: 460px;
+    width: 320px;
+    background-color: #fff;
+    font-size: 20px;
+    
+    
+}
+
+.emAlta{
+    border-bottom: 1px solid rgb(87, 87, 87);
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px
+    
+}
+
+.sla{
+    border-bottom: 1px solid rgb(87, 87, 87);
+    margin: 30px;
+    padding-bottom: 20px;
+}
+
+
 }
