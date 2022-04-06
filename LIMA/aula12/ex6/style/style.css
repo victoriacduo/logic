@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin: 25px;
+}
+
+.um{
+    font-size: 28px;
+}
+
+.dois{
+    font-size: 20px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 0 100px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.rowRed{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.rowGreen{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+}
+
+.rowBlue{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+}
+
+.justify{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.jtfRed{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.jtfGreen{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+}
+
+.jtfBlue{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+}
+
+.space{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.spRed{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.spGreen{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+}
+
+.spBlue{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 0 15px 0 15px;
+    border-radius: 50%;
+}

@@ -1,0 +1,38 @@
+body{
+    margin: 25px;
+    font-family: Arial,sans-serif;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.um{
+    font-size: 28px;
+}
+
+.dois{
+    font-size: 20px;
+}
+
+.horizontal1{
+    display: flex;
+    padding: 50px;
+}
+
+.circle{
+    padding-right: 27px;
+}
+
+.horizontal2{
+    display: flex;
+    padding: 50px;
+}
+
+.none{
+    list-style: none;
+    padding-right: 27px;
+}

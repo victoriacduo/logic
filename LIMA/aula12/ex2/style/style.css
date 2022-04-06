@@ -1,0 +1,39 @@
+body{
+    margin: 25px;
+    font-family: Arial,sans-serif;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.um{
+    font-size: 28px;
+}
+
+.dois{
+    font-size: 20px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th, td{
+    text-align: left;
+    padding: 15px;
+}
+
+.tabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.meudeus{
+    border-bottom: 1px solid #000;
+}
