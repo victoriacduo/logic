@@ -12,6 +12,14 @@
     margin: 25px;
 }
 
+.adshjd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+
 .um{
     font-size: 28px;
 }

@@ -1,6 +1,31 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin: 25px;
+}
+
+.adshjd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.um{
+    font-size: 28px;
+}
+
+.dois{
+    font-size: 20px;
 }
 
 .header{
@@ -15,7 +40,6 @@
 span{
     margin: 0 20px;
     color: #fff;
-    font-family: arial, helvetica;
     font-size: 24px;
 }
 
@@ -24,7 +48,7 @@ span{
     align-items: center;
     justify-content: center;
     background-color: #753535;
-    height: 889px;
+    height: 734px;
     width: 100%;
 }
 
