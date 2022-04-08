@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    height: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-areas: "h h" "n m" "f f";
+}
+
+header{
+    height: 100%;
+    grid-area: h;
+    background-color: white;
+}
+
+nav{
+    height: 100%;
+    background-color: black;
+    grid-area: n;
+}
+
+main{
+    height: 100%;
+    grid-area: m;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 27vh 27vh 26vh;
+    grid-template-columns: 17vw 17vw 16vw;
+}
+
+img{
+    height: 100%;
+}
+
+.um{
+    height: 100%;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.dois{
+    height: 100%;
+    border-bottom: 5px solid black;
+}
+
+.tres{
+    height: 100%;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.quatro{
+    height: 100%;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.cinco{
+    height: 100%;
+    border-bottom: 5px solid black;
+}
+
+.seis{
+    height: 100%;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.sete{
+    height: 100%;
+    border-right: 5px solid black;
+}
+
+.oito{
+    height: 100%;
+}
+
+.nove{
+    height: 100%;
+    border-left: 5px solid black;
+}
+
+footer{
+    height: 100%;
+    grid-area: f; 
+    background-color: white;
+}
