@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    height: 0;
+    box-sizing: border-box;
+    font-family: arial,sans-serif;  
+}
+
+body{
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: minmax(50px, 1fr) 5fr;
+    grid-template-areas: "n m";
+}
+
+nav{
+    height: 100%;
+    grid-area: n;
+    background-image: url('../img/backforest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.subnav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px;
+    background-color: rgb(33, 72, 129, 0.75);
+}
+
+nav {
+    grid-area: n;
+}
+
+.aa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px;
+}
+
+.logo{
+    width: 43px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+main{
+    height: 100%;
+    grid-area: m;
+    background-color: rgb(238, 238, 238);
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+.painel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.corpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}

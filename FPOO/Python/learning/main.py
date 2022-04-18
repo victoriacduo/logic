@@ -1,8 +1,6 @@
-a = 6
-b = 2
-soma = a + b
+a = a
 
-if soma==8:
+if a==a:
     print("A soma é 8!")
 else:
-    print("A soma está errada!")
+    print("dsadfjia")

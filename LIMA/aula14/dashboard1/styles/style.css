@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    height: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: grid;
+    grid-template-rows: 7vh;
+    grid-template-columns: 75vh 75vh;
+    height: 7vh;
+    background-color: #404853;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 47vh 46vh;
+    grid-template-columns: 75vh 75vh;
+    grid-template-areas: ;
+    height: 93vh;
+}
+
+.leftside{
+    grid-area: lft;
+    height: 100%;
+    padding: 5%;
+    background-color: red;
+}
+.rightside{
+    grid-area: rgt;
+    height: 100%;
+    padding: 5%;
+    background-color: yellow;
+}
