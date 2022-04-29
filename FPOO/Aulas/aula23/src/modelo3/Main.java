@@ -15,6 +15,7 @@ public class Main {
 		
 		Arquivo arq = new Arquivo();
 		
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 
 		int opcao = 0;

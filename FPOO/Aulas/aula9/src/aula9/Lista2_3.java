@@ -17,6 +17,7 @@ public class Lista2_3 {
 	public static int[] leVetor() {
 		int[] lerVetor = new int[5];
 		
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		
 		for(int i = 0; i < lerVetor.length; i++) {

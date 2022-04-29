@@ -41,15 +41,9 @@ public class Main {
 				ArrayList<String> infoFile = arq.ler("Nomes");
 				
 				System.out.println("Informe o nome: ");
-				String buscar = input.nextLine();
 				
 				for(String linha : infoFile) {
-					String[] temp = linha.split("");
 					System.out.println(linha);
-					if(temp[1].toLowerCase().contains(buscar.toLowerCase())) {
-						System.out.println("Nome: " + temp[0]);
-						System.out.println("Ano: " + temp[1]);
-					}
 				}
 				break;
 			case 0:
