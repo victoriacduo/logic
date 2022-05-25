@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\logic\SENAI\FPOO\Registro de Manutenções\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-760091825.index
-1753899526.index
