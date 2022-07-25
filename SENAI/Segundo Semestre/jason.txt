@@ -1,0 +1,10 @@
+let aluno = {
+nome: "fulano",
+matricula: 123,
+status: true,
+notas:[5,7,8],
+dep:	{
+materia: "...",
+semestre: 3
+	}
+}
