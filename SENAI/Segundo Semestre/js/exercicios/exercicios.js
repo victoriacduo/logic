@@ -19,12 +19,34 @@ function validarPlaca(){
 
 // 2 - validar cpf
 
-function validaCPF() {
+function validarCPF(){
+      cpf = document.getElementById("cpf1");
+      var cpfRes = document.getElementById("cpfRes");
+  
+      cpf = cpf.value.replace(/\D/g, '');
+      if(cpf.toString().length != 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+      var validando = true;
+      [9,10].forEach(function(j){
+          var soma = 0, r;
+          cpf.split(/(?=)/).splice(0,j).forEach(function(e, i){
+              soma += parseInt(e) * ((j+2)-(i+1));
+          });
 
-}
+          r = soma % 11;
+
+          r = (r <2)?0:11-r;
+
+          if(r != cpf.substring(j, j+1)) 
+          validando = false;
+      });
+      if(validando == true ){
+          cpfRes.innerHTML = "CPF válido";
+      }else{
+          cpfRes.innerHTML = "CPF inválido";
+      }
+  }
 
 // 3 - telefones aleatorios()
-
 function geraTelefones(){
 
       var numero = document.getElementById("numero");
