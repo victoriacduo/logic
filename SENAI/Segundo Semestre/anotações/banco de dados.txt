@@ -1,0 +1,14 @@
+tipos de bancos de dados:
+não estruturado: .txt, .docx, .pdf
+semi estruturados: formato de tabela (objeto): .xlsx (excel), .csv, .json
+estruturado: 
+sql:
+[ddl
+dml
+dcl]
+reacional
+
+não sql:
+chave - valor
+tabelas
+não reacional 

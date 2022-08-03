@@ -1,0 +1,37 @@
+projeto
+{planejamento
+implantação/desenvolvimento
+controle}
+
+xampp
+start apache and mysql
+open folder w vscode
+ctrl + "
+
+"mysql -u root"
+
+cd \
+(c: in case d:)
+cd xampp
+cd mysql
+cd bin
+mysql -u root
+
+drop database if exists > excluir caso já exista
+
+o conceitual é mais próximo da solução 
+do problema e do usuário
+
+enquanto o lógico é mais próximo da 
+ferramenta e não da solução
+
+SQL (DDL - linguagem de definição de dados)
+- create
+- describe
+- drop
+- alter
+SQL (DML - linguagem de manipulação)
+- insert
+- select
+- update
+- delete

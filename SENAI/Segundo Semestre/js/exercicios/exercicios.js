@@ -34,21 +34,20 @@ function validarCPF(){
 
           r = soma % 11;
 
-          r = (r <2)?0:11-r;
+          r = (r < 2) ? 0 : 11 - r;
 
           if(r != cpf.substring(j, j+1)) 
           validando = false;
       });
-      if(validando == true ){
+      if(validando == true ) {
           cpfRes.innerHTML = "CPF válido";
-      }else{
+      } else {
           cpfRes.innerHTML = "CPF inválido";
       }
   }
 
 // 3 - telefones aleatorios()
 function geraTelefones(){
-
       var numero = document.getElementById("numero");
       var telefoneRes = document.getElementById("telefones");
 
@@ -58,7 +57,6 @@ function geraTelefones(){
 
             telefoneRes.value += `(19)9${gerador1}-${gerador2}\n`
       }
-
 }
 
 function gerarCPF(){
