@@ -1,0 +1,37 @@
+nuvem privada - local onde tá a central
+nuvem publica - nao importa onde tá
+
+servidores de aplicação:
+iis - asp
+apache - php
+apache ton cat - jsp (java)
+v8 - node (js)
+
+internet -> roteador -> switch -> pcs(clientes)
+
+apache - php, html, css e js
+
+url
+http: -> protocolo || req e res, requisição e resposta
+requisicao do front-end
+resposta do backend
+//www.pudim -> dns
+com.br
+
+api (aplicacao) completa é rest full
+verbos http, tambem conhecido como rest:
+get 
+post
+put
+delete
+
+<?php echo '<p>Saudações da Hostinger</p>'; ?>
+
+instalar node
+criar uma pasta
+abrir no vscode
+ctrl + " terminal
+npm init
+enter até is this ok? (yes)
+package.json started
+instalar a primeira dependencia (express) -> npm install express
