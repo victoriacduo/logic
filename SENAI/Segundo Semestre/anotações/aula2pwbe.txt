@@ -1,0 +1,20 @@
+npm install atualiza o projeto
+npm install -g / --global atualiza o pc todo
+
+json é objeto java
+todo objeto java tem nome
+atributo e metodo
+json serve para trocar informacao
+entao a unica coisa que ele nao tem é metodo
+e nome nao é obrigatorio, mas tem todo tipo de
+atributo.
+
+template strings são strings que permitem 
+expressões embutidas. você pode utilizar 
+string multi-linhas e interpolação de 
+string com elas
+ex: `texto string ${expression} texto string`
+
+arrow function
+(nseioq (parametro)=>{
+});

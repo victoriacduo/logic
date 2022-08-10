@@ -1,0 +1,50 @@
+[
+	{
+		"funcionario":"Sancho Cedraz",
+		"cargo":{
+			"nome":"Analista",
+			"nivel":2
+		},
+		"autorizado":true
+	},		
+	{
+		"funcionario":"Ionara Pederneiras",
+		"cargo":{
+			"nome":"Técnico",
+			"nivel":2
+		},
+		"autorizado":true
+	},
+	{
+		"funcionario":"Filipe Castanho",
+		"cargo":{
+			"nome":"Desenvolvedor",
+			"nivel":1
+		},
+		"autorizado":false
+	},
+	{
+		"funcionario":"Lívia Bicalho",
+		"cargo":{
+			"nome":"Analista",
+			"nivel":3
+		},
+		"autorizado":true
+	},
+	{
+		"funcionario":"Mauro Varanda",
+		"cargo":{
+			"nome":"Desenvolvedor",
+			"nivel":3
+		},
+		"autorizado":false
+	},	
+	{
+		"funcionario":"Sandro Rosário",
+		"cargo":{
+			"nome":"Técnico",
+			"nivel":3
+		},
+		"autorizado":true
+	}
+]

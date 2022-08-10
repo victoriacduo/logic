@@ -11,6 +11,7 @@ create table clientes(
 create table telefones(
         id_cliente integer not null,
         telefone varchar(15) not null,
+        celular varchar(15) not null,
         foreign key (id_cliente) references clientes(id_cliente) -- cria o relacionamento da chave estrangeira para a primaria
 );
 create table pedidos(
@@ -37,10 +38,10 @@ insert into clientes values -- se for colocar fora de ordem:
 (null, "Bernadete", "Vasconcelos", "Rua Carroça, Pirassununga-SP");
 
 insert into telefones values
-(1, "19-78548-6554"),
-(1, "19-65457-5151"),
-(2, "19-78548-6554"),
-(3, "19-65457-5151");
+(1, "19-8548-6554", "18-98765-3456"),
+(1, "19-5457-5151", "53-54785-6984"),
+(2, "19-8548-6554", "21-49176-9873"),
+(3, "19-5457-5151", "11-99247-5846");
 
 insert into pedidos values
 (null, 1, null, 10, "Pastel de frango", 2),
