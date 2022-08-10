@@ -1,0 +1,10 @@
+3 elementos principais na arvore DOM
+document
+location
+history
+
+location é utilizado para navegar entre as paginas
+
+md5 hash só transforma a informação,
+nao retorna ao que era anteriormente
+criptografia transforma e retorna
