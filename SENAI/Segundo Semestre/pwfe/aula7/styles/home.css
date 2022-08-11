@@ -4,9 +4,49 @@
     box-sizing: border-box;
 }
 
-.cab{
-    display:flex;
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.opcoes{
+    display: flex;
+    height: 12vh;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 234, 241);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 25px;
+}
+
+.div1{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #3FA796;
+}
+
+.div1 p{
+    margin: 20px;
+}
+
+#img-user{
+    height: 10%;
+    border-radius: 50%;
+}
+
+.bloquinho{
+    display:flex;
+    border: 1px solid black;
+    width: 20vw;
+    align-items: center;
+    height: max-content;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#img-produto{
+    height:15vh;
+}
+#carrinho{
+    height:5vh;
 }

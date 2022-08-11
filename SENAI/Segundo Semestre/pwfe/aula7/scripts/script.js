@@ -31,16 +31,17 @@ function direcionar() {
 
     for(var u in clientes){
         var us = clientes[u];
+
         if(us.login.user === usuario && us.login.senha === senha){
-            window.location = "home.html";
+            let array = [us.nome, us.imagem];
+            localStorage.setItem("user", JSON.stringify(array));
+            // setar um item no localstorage ("nome da variavel q vai pra la", pegando um objeto json e transformando numa string(dados do json))
+            // localstorage espaço locado na memoria do navegador fontes: mionha mente
+            window.location = "pages/home.html";
+            
             return true;
         }
     }
     alert("Dados incorretos");
     return false;
-}
-
-function informacoes(){
-    var nome = document.querySelector("#nome-user");
-    var imagem = document.querySelector("#img-user");
 }
