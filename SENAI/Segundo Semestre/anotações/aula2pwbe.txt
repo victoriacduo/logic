@@ -2,7 +2,7 @@ npm install atualiza o projeto
 npm install -g / --global atualiza o pc todo
 
 json é objeto java
-todo objeto java tem nome
+todo objeto java tem nome,
 atributo e metodo
 json serve para trocar informacao
 entao a unica coisa que ele nao tem é metodo

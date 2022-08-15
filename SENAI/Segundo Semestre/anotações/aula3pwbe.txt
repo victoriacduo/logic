@@ -1,0 +1,4 @@
+request pedido ao back end
+response resposta do back end
+err erro do banco de dados
+result todo o resultado

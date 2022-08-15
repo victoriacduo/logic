@@ -36,7 +36,7 @@ function direcionar() {
             let array = [us.nome, us.imagem];
             localStorage.setItem("user", JSON.stringify(array));
             // setar um item no localstorage ("nome da variavel q vai pra la", pegando um objeto json e transformando numa string(dados do json))
-            // localstorage espaço locado na memoria do navegador fontes: mionha mente
+            // localstorage é espaço locado na memoria do navegador 
             window.location = "pages/home.html";
             
             return true;
