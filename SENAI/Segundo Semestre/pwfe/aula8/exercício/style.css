@@ -7,6 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* html{
+    scroll-behavior: smooth;
+} */
+
 .container{
     background-color: rgb(148, 180, 159);
     display: flex;
@@ -29,7 +33,6 @@
 #p{
     max-width: 50%;
 }
-
 
 .modelo {
     visibility: hidden;
