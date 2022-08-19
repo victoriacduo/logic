@@ -13,8 +13,14 @@ function direcionar(){
 
             if(user.email.toLowerCase() === email && user.username === senha){
                 logado = true;
-                localStorage.setItem("user", JSON.stringify(user.name));
-                window.location = "pages/home.html";
+                
+                let infoUser = {
+                    "id": user.id,
+                    "nome": user.name
+                }
+
+                localStorage.setItem("user", JSON.stringify(infoUser));
+                window.location = "../home/index.html";
             }
         });
 
