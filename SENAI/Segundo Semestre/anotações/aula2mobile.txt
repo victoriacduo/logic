@@ -1,0 +1,30 @@
+terminal >
+
+expo init (nome da pasta) -- cria pasta
+expo start --web
+
+val = variavel local, pode chamar de qualquer coisa
+armazena o que vc digita e coloca no setcount pra alterar o texto
+
+o val guarda na variavel relacionada ao setCount
+ex: input2 tá salvando no setcount2, entao o valor fica
+no valor1
+com isso eh possivel realizar a soma com parseInt 
+parseint = transforma string em int
+
+export default function App() {
+  const [resposta, setCount] = useState("");
+  const [valor1, setCount1] = useState("");
+  const [valor2, setCount2] = useState("");
+
+  return(
+    <View>
+      <TextInput placeholder="Segundos números" onChangeText={(val) => { setCount1(val) } }/>
+      <TextInput placeholder="Segundos números" onChangeText={(val) => { setCount2(val) } }/>
+      <TouchableOpacity onPress={() => setCount(parseInt(valor1) + parseInt(valor2))}>
+        <Text>Somar</Text>
+      </TouchableOpacity>
+      <Text>{resposta}</Text>
+    </View>
+  )
+}
