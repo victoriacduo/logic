@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #002B5B;
+}
+
+img{
+    height: 90px;
+    width: 90px;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.span{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 25px;
+}
+
+main{
+    height: 88vh;
+}
+
+.aa{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.cardzinho{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 150px;
+    height: 204px;
+    margin: 20px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, .2);
+    transition: all .2s;
+    box-shadow: 12px 12px 2px 1px rgba(43,72,101, .2);
+}
+   
+.card:hover {
+    box-shadow: -12px 12px 2px -1px rgba(43,72,101, .2);
+}
+
+.nome{
+    font-weight: bold;
+}
+
+.info2, .info3{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.modelo {
+    visibility: hidden;
+    display: none;
+}

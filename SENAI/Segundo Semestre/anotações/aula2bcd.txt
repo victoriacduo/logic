@@ -3,6 +3,13 @@ projeto
 implantação/desenvolvimento
 controle}
 
+package.json > 
+npm init 
+npm i express
+npm i cors
+npm i mysql
+npm i nodemon
+
 xampp
 start apache and mysql
 open folder w vscode

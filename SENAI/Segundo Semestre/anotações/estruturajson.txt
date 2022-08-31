@@ -1,0 +1,20 @@
+console.log(`X = ${x}`); = system.out.print("X = " + int);
+
+Math.floor = arredonda números quebrados pra baixo (y)
+padStart = pega um número e verifica se tem o tamanho do primeiro valor
+ex: 568.3.880-75 > 568.003.880-75
+
+json
+
+let aluno = {
+	nome: "fulano",
+	matricula: 123,
+	status: true,
+	notas:[5,7,8],
+	dep:	{
+		materia: "...",
+		semestre: 3
+		}
+}
+
+

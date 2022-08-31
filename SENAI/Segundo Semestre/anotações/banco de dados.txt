@@ -8,6 +8,10 @@ dml
 dcl]
 reacional
 
+ddl - dml
+ddl linguagem de desenvolvimento de dados
+dml linguagem de manipulação de dados
+
 não sql:
 chave - valor
 tabelas

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="https://cdn-icons-png.flaticon.com/512/2307/2307887.png" />
+    <link rel="stylesheet" href="style.css">
+    <title>Academia Tucsons</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/2307/2307887.png">
+        </div>
+        <div class="span">
+            <span>Fale Conosco</span>
+        </div>
+    </header>
+    <main>
+        <div class="botoes">
+            <form action="http://127.0.0.1:5500/alunos/alunos.html" method="get">
+                <button type="submit" onclick="alunos()">Alunos</button>
+            </form>
+            <form action="http://localhost:5000/academia/aparelhos" method="get">
+                <button type="submit">Aparelhos</button>
+            </form>
+            <form action="http://localhost:5000/academia/fichas" method="get">
+                <button type="submit">Exercícios</button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
