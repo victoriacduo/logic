@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    height: 20px;
+    width: 20px;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+th{
+    padding: 10px;
+}
+
+#cod_cli, #nome, #endereco, #bairro, #cidade, #uf, #tipo, #numero{
+    padding: 5px;
+}
+
+#imagemTel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.modal{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dentro{
+    height: 200px;
+    width: 300px;
+    background-color: white;
+}
+
+.modelo{
+    display: none;
+}

@@ -1,0 +1,13 @@
+abrir um projeto node.js em andamento:
+
+1. copiar a pasta do projeto;
+2. procurar a documentacao;
+3. ajustar o banco (start) rodar o script dnv
+4. iniciar o ambiente (npm i pra iniciar)
+- nodemon pra startar
+5. testar via insomnia, navegador
+
+3 estruturas de dados
+pilha filo (first in last out)
+fila fifo (first in first out)
+lista

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicatas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4930/4930757.png" type="image/x-icon">
+</head>
+<body onload="linhas()">
+    <table border="3">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>Contato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="asLinhas modelo">
+                <td id="cod_cli">Cod</td>
+                <td id="nome">Nome</td>
+                <td id="endereco">Endereco</td>
+                <td id="bairro">Bairro</td>
+                <td id="cidade">Cidade</td>
+                <td id="uf">UF</td>
+                <td id="imagemTel"><img onclick="telefones(this)" src="https://cdn-icons-png.flaticon.com/512/725/725624.png"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="modal modelo">
+        <div class="modal-dentro">
+            <button onclick="showModal()">X</button>
+            <table border="3">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Número</th>
+                    </tr>
+                </thead>
+                <tbody class="segundoTbody">
+                    <tr id="corpinhoTel" class="modelo">
+                        <td id="tipo">Tipo</td>
+                        <td id="numero">Número</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
