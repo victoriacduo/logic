@@ -8,6 +8,8 @@ const inputNome = document.querySelector("#nome");
 const inputQuantidade = document.querySelector("#quantidade");
 const inputValor = document.querySelector("#valor");
 
+const btCadedit = document.querySelector("#cadedit");
+
 fetch("http://localhost:3000/produtos")
 .then(res => { return res.json() })
 .then(produtos => {
@@ -28,6 +30,8 @@ fetch("http://localhost:3000/produtos")
 
         linha.querySelector("#edita").addEventListener("click", () => {
             modalEditar.classList.remove("model"); 
+            btCadedit.innerHTML = "Editar";
+            btCadedit.onclick = () => { editarProduto() }
             inputCodigo.value = produto.cod;
             inputNome.value = produto.nome;
             inputQuantidade.value = produto.quantidade;
@@ -46,14 +50,24 @@ function fecharModalEditar() {
     modalEditar.classList.add("model");
 }
 
-function editarProduto(){
+function abrirModalCadastro() {
+    btCadedit.innerHTML = "Cadastrar";
+    btCadedit.onclick = () => { cadastrarProduto(); }
+    inputCodigo.value = "";
+    inputNome.value = "";
+    inputQuantidade.value = "";
+    inputValor.value = "";
+    modalEditar.classList.remove("model");
+}
+
+function editarProduto() {
     let produto = {
-        "cod": inputCodigo.value,
-        "nome": inputNome.value,
-        "quantidade": inputQuantidade.value,
-        "preco": inputValor.value
+        "cod":inputCodigo.value,
+        "nome":inputNome.value,
+        "quantidade":inputQuantidade.value,
+        "preco":inputValor.value,
     }
-    
+
     fetch("http://localhost:3000/produto", {
         "method":"PUT",
         "headers": {
@@ -72,12 +86,12 @@ function editarProduto(){
     })
 }
 
-function excluirProduto(){
+function excluirProduto() {
     let data = {
-        "cod": document.querySelector("#cod").innerHTML
+        "cod":document.querySelector("#cod").innerHTML
     }
 
-    fetch("http://localhost:3000/produto",{
+    fetch("http://localhost:3000/produto", {
         "method":"DELETE",
         "headers":{
             "Content-Type": "application/json"
@@ -87,10 +101,36 @@ function excluirProduto(){
     .then(res => { return res.json() })
     .then(resp => {
         if(resp.cod !== undefined) {
-            alert("Produto Excluído com Sucesso")
+            alert("Produto Excluido Com Sucesso!");
             window.location.reload();
-        } else {
-            alert("Falha ao Excluir Produto")
+        }else {
+            alert("Falha ao excluir produto !");
         }
+    });
+}
+
+function cadastrarProduto() {
+    let produto = {
+        "cod": inputCodigo.value,
+        "nome": inputNome.value,
+        "quantidade": inputQuantidade.value,
+        "preco": inputValor.value
+    };
+
+    fetch("http://localhost:3000/produtos", {
+        "method":"POST",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": JSON.stringify(produto)
     })
+    .then(res => {return res.json()})
+    .then(resp => {
+        if(resp.cod !== undefined){
+            alert("Produto Cadastrado Com Sucesso !");
+            window.location.reload();
+        }else {
+            alert("Falha ao cadastrar produto");
+        }
+     })
 }

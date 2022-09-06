@@ -30,7 +30,7 @@ function cadastrar(){
     let data = JSON.stringify({
         "cod": cod,
         "nome": nome,
-        "qntd": qntd,
+        "quantidade": qntd,
         "preco": preco
     });
 
