@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojinha do Japoneis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Livro Caixa</h1>
+        </div>
+        <div class="nav">
+            <label for="dia">Filtro:</label>
+            <input type="date" id="dia" name="dia">
+            <span>Novo Lançamento</span>
+            <button id="novoLancamento">+</button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h3>Débitos</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Data</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="asLinhas modelo">
+                            <td id="id">ID</td>
+                            <td id="data">Data</td>
+                            <td id="descricao">Descrição</td>
+                            <td id="valor">Valor</td>
+                            <td id="tipo">Tipo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3>Créditos</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Data</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="asLinhas modelo">
+                            <td id="id">ID</td>
+                            <td id="data">Data</td>
+                            <td id="descricao">Descrição</td>
+                            <td id="valor">Valor</td>
+                            <td id="tipo">Tipo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2>Saldo acumulado: </h2>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
