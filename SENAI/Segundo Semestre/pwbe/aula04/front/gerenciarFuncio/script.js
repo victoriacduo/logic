@@ -3,6 +3,8 @@ const linhamodelo = document.querySelector(".linhamodelo");
 const modalExcluir = document.querySelector(".excluir");
 const modalEditar = document.querySelector(".editar");
 
+const btCadedit = document.querySelector(".btnEditCad")
+
 const inputId = document.querySelector("#id");
 const inputMatricula = document.querySelector("#matricula");
 const inputNome = document.querySelector("#nome");
@@ -12,29 +14,41 @@ const inputCpf = document.querySelector("#cpf");
 
 fetch("http://localhost:3000/funcionarios")
 .then(res => { return res.json() })
-.then(produtos => {
-    produtos.forEach(produto => {
+.then(funcionarios => {
+    produtos.forEach(funcionario => {
         let linha = linhamodelo.cloneNode(true);
         linha.classList.remove("model");
 
         let colunas = linha.querySelectorAll("td");
-        colunas[0].innerHTML = funcionario.id;
-        colunas[1].innerHTML = funcionario.matricula;
-        colunas[2].innerHTML = funcionario.nome;
-        colunas[3].innerHTML = funcionario.cargo;
-        colunas[4].innerHTML = "R$ " + funcionario.salario;
-        colunas[5].innerHTML = funcionario.cpf;
+        colunas[0].innerHTML = funcionario.matricula;
+        colunas[1].innerHTML = funcionario.nome;
+        colunas[2].innerHTML = funcionario.cargo;
+        colunas[3].innerHTML = "R$ " + funcionario.salario;
+        colunas[4].innerHTML = ''
 
-        linha.querySelector("exclui").addEventListener("click", () => {
+        let cpf = funcionario.cpf.split('');
+
+        for (let i = 0; i < cpf.length; i++) {
+            if (i%3 == 0 && i != 0) {
+                if (i == 9) {
+                    colunas[4].innerHTML = colunas[4].innerHTML + '-'
+                } else {
+                    colunas[4].innerHTML = colunas[4].innerHTML + '.'
+                }
+                
+            }
+            colunas[4].innerHTML = colunas[4].innerHTML + cpf[i]
+        }
+
+        linha.querySelector("#exclui").addEventListener("click", () => {
             modalExcluir.classList.remove("model");
-            modalExcluir.querySelector("#id").innerHTML = funcionario.id;
-        })
+            modalExcluir.querySelector("#matricula").innerHTML = funcionario.matricula;
+        });
 
         linha.querySelector("#edita").addEventListener("click", () => {
             modalEditar.classList.remove("model");
-            btCadedit.innerHTML = ("Editar");
+            btCadedit.innerHTML = "Editar";
             btCadedit.onclick = () => { editarFuncio() }
-            inputId.value = funcionario.id;
             inputMatricula.value = funcionario.matricula;
             inputNome.value = funcionario.nome;
             inputCargo.value = funcionario.cargo;
@@ -57,7 +71,6 @@ function fecharModalEditar(){
 function abrirModalCadastro(){
     btCadedit.innerHTML = "Cadastrar";
     btCadedit.onclick = () => { cadastrarFuncio(); }
-    inputId.value = funcionario.id;
     inputMatricula.value = "";
     inputNome.value = "";
     inputCargo.value = "";
@@ -68,7 +81,6 @@ function abrirModalCadastro(){
 
 function editarFuncio(){
     let funcionario = {
-        "id": inputId.value,
         "matricula": inputMatricula.value,
         "nome": inputNome.value,
         "cargo": inputCargo.value,
@@ -85,7 +97,7 @@ function editarFuncio(){
     })
     .then(res => { return res.json() })
     .then(resp => {
-        if(resp.cod !== undefined) {
+        if(resp.matricula !== undefined) {
             alert("Funcionário Alterado com Sucesso !");
             window.location.reload();
         }else {
@@ -96,7 +108,7 @@ function editarFuncio(){
 
 function excluirFuncio() {
     let data = {
-        "id":document.querySelector("#id").innerHTML
+        "matricula": document.querySelector("#matricula").innerHTML
     }
 
     fetch("http://localhost:3000/funcionario", {
@@ -108,7 +120,7 @@ function excluirFuncio() {
     })
     .then(res => { return res.json() })
     .then(resp => {
-        if(resp.id !== undefined) {
+        if(resp !== undefined) {
             alert("Funcionário Excluido Com Sucesso!");
             window.location.reload();
         }else {
@@ -119,7 +131,6 @@ function excluirFuncio() {
 
 function cadastrarFuncio() {
     let funcionario = {
-        "id": inputId.value,
         "matricula": inputMatricula.value,
         "nome": inputNome.value,
         "cargo": inputCargo.value,
@@ -136,7 +147,7 @@ function cadastrarFuncio() {
     })
     .then(res => {return res.json()})
     .then(resp => {
-        if(resp.id !== undefined){
+        if(resp.matricula !== undefined){
             alert("Funcionário Cadastrado Com Sucesso !");
             window.location.reload();
         }else {

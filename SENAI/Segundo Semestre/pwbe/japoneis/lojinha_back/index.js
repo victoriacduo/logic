@@ -13,7 +13,7 @@ const con = mysql.createConnection({
 });
 
 app.get('/lojinha/produtos', (req, res) => {
-    let query = "SELECT * FROM produtos";
+    let query = 'SELECT * FROM produtos';
     con.query(query, (err, result) => {
         if(err == null) {
             res.status(201).json(req.body).end();
@@ -24,7 +24,18 @@ app.get('/lojinha/produtos', (req, res) => {
 });
 
 app.get('/lojinha/produtos', (req, res) => {
-    let query = `SELECT * FROM produtos WHERE data = '${req.params.data}'`
+    let query = `SELECT * FROM produtos WHERE data = '${req.params['data']}'`;
+    con.query(query, (err, result) => {
+        if(err == null) {
+            res.status(201).json(req.body).end();
+        } else {
+            res.status(400).json(err).end();
+        }
+    });
+});
+
+app.post('/lojinha/produtos', (req, res) => {
+    let query = `INSERT INTO produtos VALUES (DEFAULT, '${req.body.data}', '${req.body.descricao}', ${req.body.valor}, '${req.body.tipo}')`;
     con.query(query, (err, result) => {
         if(err == null) {
             res.status(201).json(req.body).end();
