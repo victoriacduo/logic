@@ -27,7 +27,7 @@ app.get('/lojinha/produtos/:dia', (req, res) => {
     let query = `SELECT * FROM produtos WHERE dia = '${req.params['dia']}'`;
     con.query(query, (err, result) => {
         if(err == null) {
-            res.status(201).json(req.body).end();
+            res.status(201).json(result).end();
         } else {
             res.status(400).json(err).end();
         }
@@ -35,7 +35,7 @@ app.get('/lojinha/produtos/:dia', (req, res) => {
 });
 
 app.post('/lojinha/produtos', (req, res) => {
-    let query = `INSERT INTO produtos VALUES (DEFAULT, '${req.body.data}', '${req.body.descricao}', ${req.body.valor}, '${req.body.tipo}')`;
+    let query = `INSERT INTO produtos VALUES (DEFAULT, '${req.body.dia}', '${req.body.descricao}', ${req.body.valor}, '${req.body.tipo}')`;
     con.query(query, (err, result) => {
         if(err == null) {
             res.status(201).json(req.body).end();

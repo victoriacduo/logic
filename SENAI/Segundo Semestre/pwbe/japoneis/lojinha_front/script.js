@@ -8,8 +8,10 @@ const datinha = new Date().toISOString().slice(0, 10);
 const datasLa = document.querySelector("#datas");
 
 var selecionarDatas = [];
+var total = 0;
 
 function linhas() {
+    
     fetch('http://localhost:5000/lojinha/produtos')
     .then(res => { return res.json() })
     .then(data => {
@@ -27,7 +29,8 @@ function linhas() {
                 novaLinha.querySelector("#valor").innerHTML = linha.valor;
                 novaLinha.querySelector("#tipo").innerHTML = linha.tipo;
 
-                document.querySelector("#tabelaDebito").appendChild(novaLinha);
+                document.querySelector("#tabelaDebito").appendChild(novaLinha); 
+                calcularTotal(-linha.valor);
             } else {
                 let novaLinha = document.querySelector(".asLinhas").cloneNode(true);
                 novaLinha.classList.remove("modelo");
@@ -39,6 +42,7 @@ function linhas() {
                 novaLinha.querySelector("#tipo").innerHTML = linha.tipo;
 
                 document.querySelector("#tabelaCredito").appendChild(novaLinha);
+                calcularTotal(linha.valor);
             }
 
             if(linha.dia.slice(0,10) != selecionarDatas[i-1]){
@@ -46,6 +50,7 @@ function linhas() {
                 i++;
             }
         });
+        document.querySelector("#valorfinal").innerHTML = `Saldo acumulado: R$ ${total.toLocaleString('pt-BR')}`;
     });
 }
 
@@ -81,7 +86,7 @@ function cadastrarProdutos() {
         }else {
             alert("Falha ao cadastrar venda");
         }
-     })
+     });
 }
 
 function opcoes() {
@@ -103,16 +108,16 @@ function mudar() {
     for(let i = tableDebito.length; i > 2; i--){
         document.querySelector("#tabelaDebito").deleteRow(i-1)
     }
-
     filtrarr();
 }
 
 function filtrarr(){
+    total = 0;
     fetch(`http://localhost:5000/lojinha/produtos/${datasLa.value}`)
     .then(res => {return res.json()})
-    .then(resposta => {
-        resposta.forEach((linha) => {
-
+    .then(data => {
+        data.forEach((linha) => {
+            
             if(linha.tipo == "D") {
                 let novaLinha = document.querySelector(".asLinhas").cloneNode(true);
                 novaLinha.classList.remove("modelo");
@@ -124,6 +129,7 @@ function filtrarr(){
                 novaLinha.querySelector("#tipo").innerHTML = linha.tipo;
 
                 document.querySelector("#tabelaDebito").appendChild(novaLinha);
+                calcularTotal(-linha.valor);
             } else {
                 let novaLinha = document.querySelector(".asLinhas").cloneNode(true);
                 novaLinha.classList.remove("modelo");
@@ -135,7 +141,13 @@ function filtrarr(){
                 novaLinha.querySelector("#tipo").innerHTML = linha.tipo;
 
                 document.querySelector("#tabelaCredito").appendChild(novaLinha);
+                calcularTotal(linha.valor);
             }
-        })
-    })
+        });
+        document.querySelector("#valorfinal").innerHTML = `Saldo acumulado: R$ ${total.toLocaleString('pt-BR')}`;
+    });
+}
+
+function calcularTotal(valor) {
+    total += valor;
 }
