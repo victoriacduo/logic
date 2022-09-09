@@ -3,7 +3,7 @@ const cors = require("cors");
 const mysql = require("mysql");
 
 const app = express();
-app.use(express());
+app.use(express.json());
 app.use(cors());
 
 const con = mysql.createConnection({
@@ -16,15 +16,15 @@ app.get('/lojinha/produtos', (req, res) => {
     let query = 'SELECT * FROM produtos';
     con.query(query, (err, result) => {
         if(err == null) {
-            res.status(201).json(req.body).end();
+            res.status(201).json(result).end();
         } else {
             res.status(400).json(err).end();
         }
     });
 });
 
-app.get('/lojinha/produtos', (req, res) => {
-    let query = `SELECT * FROM produtos WHERE data = '${req.params['data']}'`;
+app.get('/lojinha/produtos/:dia', (req, res) => {
+    let query = `SELECT * FROM produtos WHERE dia = '${req.params['dia']}'`;
     con.query(query, (err, result) => {
         if(err == null) {
             res.status(201).json(req.body).end();

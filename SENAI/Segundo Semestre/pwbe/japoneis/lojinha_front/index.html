@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lojinha do Japoneis</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2151/2151401.png" type="image/x-icon">
 </head>
-<body>
+<body onLoad="linhas()">
     <header>
         <div>
             <h1>Livro Caixa</h1>
         </div>
         <div class="nav">
             <label for="dia">Filtro:</label>
-            <input type="date" id="dia" name="dia">
+            <select name="datas" id="datas" onclick="opcoes()" onchange="mudar()">
+                <option id="selected-data"></option>
+            </select>
             <span>Novo Lançamento</span>
             <button id="novoLancamento" onclick="abrirModalCadastro()">+</button>
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container tabletable">
             <div>
                 <h3>Débitos</h3>
                 <table border="1">
@@ -76,21 +79,22 @@
         <div class="modal-content">
             <div class="modal-content-header">
                 <h3>Criar Novo Lançamento</h3>
-                <button onClick="fecharModalCadastrar()" class="btn-fechar">X</button>
+                <button onClick="fecharModalCadastro()" class="btn-fechar">X</button>
             </div>
             <div class="modal-content-body">
                 <label for="descricao">Descrição:</label>
-                <input type="text" id="descricao" placeholder="Descrição da Venda">
-                <label for="tipo">Tipo:</label>
-                <select id="tipo" name="Tipo">
-                    <option value="saida">Saída</option>
-                    <option value="entrada">Entrada</option>
+                <input type="text" id="descricaoCadastro" placeholder="Descrição da Venda">
+                <label for="tipoSelect">Tipo:</label>
+                <select id="tipoSelect" name="Tipo">
+                    <option id="idD" value="D">Saída</option>
+                    <option id="idC" value="C">Entrada</option>
                   </select>
-                <input type="number" id="valor" placeholder="Valor da Venda">
+                <label for="valor">Valor:</label>
+                <input type="number" id="valorCadastro" placeholder="Valor da Venda">
             </div>
             <div class="modal-content-footer">
                 <span>*</span>
-                <button onclick="enviarCadastro()" class="btn enviar">Enviar</button>
+                <button onclick="cadastrarProdutos()" class="btn enviar">Enviar</button>
             </div>
         </div>
     </div>

@@ -60,6 +60,11 @@ main{
     border-bottom: 1px solid #000;
 }
 
+.tabletable{
+    overflow-y: scroll;
+    height: 70vh;
+}
+
 h3{
     display: flex;
     justify-content: center;
@@ -74,6 +79,8 @@ footer{
 }
 
 .modal {
+    top: 0;
+    left: 0;
     display: flex;
     position: fixed;
     width: 100vw;
@@ -115,4 +122,31 @@ footer{
 
 .modal-content-body {
     margin-top: 20px;
+}
+
+.modal-content-header, .modal-content-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.modal-content-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#descricaoCadastro, #tipoSelect, #valorCadastro{
+    border-radius: 5px;
+    border-width: 1px;
+    height: 30px;
+    padding: 5px;
+    margin: 3px 15px 3px 15px;
+}
+
+.btn{
+    height: 30px;
+    width: 50px;
 }
