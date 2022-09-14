@@ -12,6 +12,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 h1{
@@ -34,7 +35,7 @@ label, span{
 }
 
 #datas{
-    width: 110px;
+    width: 120px;
 }
 
 button{
