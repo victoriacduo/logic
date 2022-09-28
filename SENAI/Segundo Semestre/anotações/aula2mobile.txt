@@ -3,6 +3,19 @@ terminal >
 expo init (nome da pasta) -- cria pasta
 expo start --web
 
+.
+
+instalar o navigation do react:
+yarn add @react-navigation/native
+
+yarn add react-native-screens react-native-safe-area-context
+
+yarn add @react-navigation/native-stack
+
+
+.
+
+
 val = variavel local, pode chamar de qualquer coisa
 armazena o que vc digita e coloca no setcount pra alterar o texto
 
