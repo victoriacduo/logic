@@ -9,7 +9,7 @@ CREATE TABLE itens(
     valor NUMERIC(10,2),
     img VARCHAR(200) DEFAULT 'default.png',
     CONSTRAINT pk_item primary key (ni)
-)
+);
 
 DESCRIBE ITENS;
 
