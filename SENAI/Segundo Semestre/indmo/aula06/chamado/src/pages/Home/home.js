@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import { ScrollView, View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
+import { View, TextInput } from 'react-native';
+import itensCad from '../../components/itemLista/compItem';
 
 import style from './style';
 
-export default function Home() {
+export default function Home({ routes }) {
     const [searchWord, setSearchWord] = useState('')
+    const id = routes;
 
     const chamados = [
         {
@@ -51,17 +53,14 @@ export default function Home() {
             onChangeText={setSearchWord}
             />
 
-            <View style={style.chamados}>
-                {chamados.filter((val) => {
-                    if(searchWord == ""){
-                        return val
-                    } else if(val.chamados.titulo.toLowerCase().includes(searchWord.toLowerCase())){
-                        return val 
-                    }
-                }).map((item, index) => (
-                    <Text style={style.title} key={index}>{item.chamados.titulo}</Text>
-                ))}
-            </View>
+            {   
+            chamados[id].chamados.map((item, index) => {
+                return(
+                    <itensCad value1={item.titulo}
+                    value2={item.descricao}/>
+                )
+            })
+        }
         </View>
     )
 }

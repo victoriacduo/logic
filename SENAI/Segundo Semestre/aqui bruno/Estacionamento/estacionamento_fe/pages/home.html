@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1048/1048314.png" type="image/x-icon">
+</head>
+<body onload="preencher()">
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="vagas.html">Vagas</a></li>
+            <li><a href="relatorio.html">Relatório</a></li>
+        </ul>
+        <button id="botao1">Cadastrar</button>
+    </header>
+    <main>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>CPF</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Placa</th>
+                    <th>Tipo</th>
+                    <th>Modelo</th>
+                    <th>Cor</th>
+                    <th>ID Vaga</th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr id="linha">
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <ul>
+            <li>Fale Conosco</li>
+            <li>Sobre Nós</li>
+            <li>Quem Somos</li>
+        </ul>
+    </footer>
+
+    <div class="modal model">
+        <div class="form-modal">
+            <div class="cad-cli">
+                <input type="text" id="cpfModal" placeholder="CPF">
+                <input type="text" id="nomeModal" placeholder="Nome do Cliente">
+                <input type="text" id="telModal" placeholder="Telefone">
+            </div>
+            <div class="cad-vei">
+                <input type="text" id="placaModal" placeholder="Placa do Veiculo">
+                <input type="text" id="tipoModal" placeholder="Tipo do Veiculo">
+                <input type="text" id="modModal" placeholder="Modelo">
+                <input type="text" id="corModal" placeholder="Cor">
+
+                <input type="text" id="vagaModal" placeholder="Vaga">
+                <button id="botCad" onclick="cadastrar()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../script/home.js"></script>
+</html>

@@ -59,7 +59,7 @@ const excluirItem = (req, res)=> {
 } 
 
 module.exports = {
-    criarItem,
+    criarItens,
     listarItens,
     listarItem,
     alterarItem,
