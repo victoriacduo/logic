@@ -15,10 +15,27 @@
             <li><a href="#">Vagas</a></li>
             <li><a href="relatorio.html">Relatório</a></li>
         </ul>
-        <img>
+        <button id="botao1">Cadastrar Vaga</button>
     </header>
     <main>
-        
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>ID Vaga</th>
+                    <th>Status</th>
+                    <th>Tipo</th>
+                    <th>Valor por Hora</th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr id="linha">
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
         <ul>
@@ -27,5 +44,16 @@
             <li>Quem Somos</li>
         </ul>
     </footer>
+
+    <div class="modal model">
+        <div class="form-modal">
+            <div class="cad-vaga">
+                <input type="text" id="modModal" placeholder="Tipo">
+                <input type="number" id="corModal" placeholder="Valor por Hora">
+
+                <button id="botCad" onclick="cadastrar()">Concluir</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
