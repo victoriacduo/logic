@@ -2,9 +2,6 @@ import {useState} from 'react';
 import {View, Text, TouchableOpacity, TextInput, Button, StyleSheet} from 'react-native';
 
 export default function App() {
-  // const [resposta, setCount] = useState("");
-  // const [valor1, setCount1] = useState("");
-  // const [valor2, setCount2] = useState("");
 
   const [resultado, setValor] = useState("");
   const [valor1, setValor1] = useState("");
@@ -12,14 +9,6 @@ export default function App() {
   const [botao, setBotao] = useState("");
 
   return(
-    // <View>
-    //   <TextInput placeholder="Segundos números" onChangeText={(val) => { setCount1(val) } }/>
-    //   <TextInput placeholder="Segundos números" onChangeText={(val) => { setCount2(val) } }/>
-    //   <TouchableOpacity onPress={() => setCount(parseInt(valor1) + parseInt(valor2))}>
-    //     <Text>Somar</Text>
-    //   </TouchableOpacity>
-    //   <Text>{resposta}</Text>
-    // </View>
     <View style={style.container}>
       <View style={style.calculadora}>
         <View>
