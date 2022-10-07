@@ -111,25 +111,17 @@ Select Year(curdate()) as ano;
 Select month(curdate()) as mes;
 show tables;
 
--- select * from solicitacoes
--- where data_sol >= '2018-02-01'
--- and data_sol <= '2018-02-28';
+select * from solicitacoes
+where data_sol >= '2018-02-01'
+and data_sol <= '2018-02-28';
 
--- SELECT Cod_Func, Nome_Func, sum(Valor) as Soma from (SELECT f.Cod_Func, f.Nome_Func, its.Valor FROM funcionarios f
--- INNER JOIN solicitacoes s
--- on s.Cod_Func = f.Cod_Func
--- INNER JOIN itens_solicitacao its
--- on s.Num_Sol = its.Num_Sol) as Tabela
--- GROUP BY Cod_Func
--- ORDER BY Soma DESC LIMIT 1;
-
--- select cod_func, nome_func, sum(valor) as soma from (select f.cod_func, f.nome_func, its.valor from funcionarios f
--- inner join solicitacoes s
--- on s.cod_func = f.cod_func
--- inner join itens_solicitacao its
--- on s.num_sol = its.num_sol) as tabela
--- group by cod_func
--- order by soma desc limit 1;
+SELECT Cod_Func, Nome_Func, sum(Valor) as Soma from (SELECT f.Cod_Func, f.Nome_Func, its.Valor FROM funcionarios f
+INNER JOIN solicitacoes s
+on s.Cod_Func = f.Cod_Func
+INNER JOIN itens_solicitacao its
+on s.Num_Sol = its.Num_Sol) as Tabela
+GROUP BY Cod_Func
+ORDER BY Soma DESC LIMIT 1;
 
 create view vw_visao as
 select s.num_sol, s.data_sol, dpt.cod_depto, dpt.nome_depto, fun.cod_func, 
@@ -143,8 +135,6 @@ on s.num_sol = its.num_sol
 inner join Produtos p
 on its.cod_produto = p.cod_produto order by s.num_sol desc;
 select * from vw_visao;
-
--- select Nome_Depto from vw_visao where Nome_produto like "%Para%" or Nome_produto like "%Dif%";
 
 create view vw_teste as
 select dpt.nome_depto, p.nome_produto from departamentos dpt

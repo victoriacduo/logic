@@ -8,17 +8,36 @@
     <link rel="stylesheet" href="../styles/relatorio.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1048/1048314.png" type="image/x-icon">
 </head>
-<body>
+<body onload="carregar()">
     <header>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="#">Vagas</a></li>
-            <li><a href="relatorio.html">Relatório</a></li>
+            <li><a href="vagas.html">Vagas</a></li>
+            <li><a href="#">Relatório</a></li>
         </ul>
         <img>
     </header>
     <main>
-
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>CPF</th>
+                    <th>Entrada</th>
+                    <th>Saída</th>
+                    <th>Placa</th>
+                    <th>ID Vaga</th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr id="linha" class="model">
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
         <ul>
@@ -28,4 +47,5 @@
         </ul>
     </footer>
 </body>
+<script src="../script/relatorio.js"></script>
 </html>

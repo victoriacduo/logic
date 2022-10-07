@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="../styles/vagas.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1048/1048314.png" type="image/x-icon">
 </head>
-<body>
+<body onload="carregar()">
     <header>
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="#">Vagas</a></li>
             <li><a href="relatorio.html">Relatório</a></li>
         </ul>
-        <button id="botao1">Cadastrar Vaga</button>
+        <button id="botao1" onclick="abrirModal()">Cadastrar Vaga</button>
     </header>
     <main>
         <table border="2">
@@ -28,7 +28,7 @@
                 </tr>
             </thead>
             <tbody id="container">
-                <tr id="linha">
+                <tr id="linha" class="model">
                     <td>a</td>
                     <td>a</td>
                     <td>a</td>
@@ -47,13 +47,15 @@
 
     <div class="modal model">
         <div class="form-modal">
+            <button class="fechar" onclick="fecharModal()">X</button>
             <div class="cad-vaga">
-                <input type="text" id="modModal" placeholder="Tipo">
-                <input type="number" id="corModal" placeholder="Valor por Hora">
+                <input type="text" id="tipoModal" placeholder="Tipo">
+                <input type="number" id="valorModal" placeholder="Valor por Hora">
 
                 <button id="botCad" onclick="cadastrar()">Concluir</button>
             </div>
         </div>
     </div>
 </body>
+<script src="../script/vaga.js"></script>
 </html>

@@ -97,42 +97,76 @@ inner join itens_solicitacao i on s.Num_Sol = i.Num_Sol
 inner join produtos p on i.Cod_Produto = p.Cod_Produto
 order by num_sol desc;
 
-drop procedure if exists solicita_um_produto;
+-- cria solicitação
+drop procedure if exists solicita_um_item;
 delimiter //
-create procedure solicita_um_produto(cod_prod int nome_p varchar)
+create procedure solicita_um_item(n_sol int,depto int,func int,prod int,qtd int,total float)
 BEGIN
 	declare erro_sql tinyint default false;
 	declare continue handler for sqlexception set erro_sql = true;
-	insert into Produtos values (cod_prod,nome_p);
+	insert into Solicitacoes values (n_sol,curdate(),depto,func);
+	insert into Itens_Solicitacao values (n_sol,prod,qtd,total);
 	IF erro_sql = false THEN
 		select * from vw_solicitacoes where Num_Sol = n_sol;
+		select 'Solicitação cadastrada com sucesso' as 'Sucesso';
+	ELSE
+		select 'Erro ao inserir solicitação' as 'Erro';
+	END IF;
+end //
+delimiter ;
+
+call solicita_um_item(1055,1000,100,125,1,10);
+
+drop procedure if exists procedure_prod;
+delimiter //
+create procedure procedure_prod(prod int,nome_prod char)
+BEGIN
+	declare erro_sql tinyint default false;
+	declare continue handler for sqlexception set erro_sql = true;
+	insert into Produtos values (prod,nome_prod);
+	IF erro_sql = false THEN
+		select * from vw_solicitacoes where Nome_produto = prod;
 		select 'Produto cadastrado com sucesso' as 'Sucesso';
 	ELSE
-		select 'Erro ao inserir produto' as 'Erro';
+		select 'Erro ao cadastrar produto' as 'Erro';
 	END IF;
 end //
 delimiter ;
 
-call solicita_um_produto(165,"Alicate");
+call procedure_prod(165, "Alicate");
 
-
-
-drop procedure if exists solicita_um_dep;
+drop procedure if exists procedure_prod;
 delimiter //
-create procedure solicita_um_dep(cod_dep int nome_dep varchar)
+create procedure procedure_prod(prod int,nome_prod char)
 BEGIN
 	declare erro_sql tinyint default false;
 	declare continue handler for sqlexception set erro_sql = true;
-	insert into Produtos values (cod_dep,nome_dep);
+	insert into Produtos values (prod,nome_prod);
 	IF erro_sql = false THEN
-		select * from vw_solicitacoes where Num_Sol = n_sol;
-		select 'Departamento cadastrado com sucesso' as 'Sucesso';
+		select * from vw_solicitacoes where Nome_produto = prod;
+		select 'Produto cadastrado com sucesso' as 'Sucesso';
 	ELSE
-		select 'Erro ao inserir departamento' as 'Erro';
+		select 'Erro ao cadastrar produto' as 'Erro';
 	END IF;
 end //
 delimiter ;
 
-call solicita_um_dep(3000,"Assistência Técnica");
+call procedure_prod(165, "Alicate");
 
--- insert into Produtos values (cod_prod,nome_p);
+-- drop procedure if exists procedure_prod;
+-- delimiter //
+-- create procedure procedure_prod(prod int,nome_prod char)
+-- BEGIN
+-- 	declare erro_sql tinyint default false;
+-- 	declare continue handler for sqlexception set erro_sql = true;
+-- 	insert into Produtos values (prod,nome_prod);
+-- 	IF erro_sql = false THEN
+-- 		select * from vw_solicitacoes where Nome_produto = prod;
+-- 		select 'Produto cadastrado com sucesso' as 'Sucesso';
+-- 	ELSE
+-- 		select 'Erro ao cadastrar produto' as 'Erro';
+-- 	END IF;
+-- end //
+-- delimiter ;
+
+-- call procedure_prod(165, "Alicate");
