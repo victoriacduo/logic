@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamentos</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body onload="preencher()">
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Solicitações</a></li>
+        </ul>
+        <button id="delDep" onclick="abrirModal()">Excluir Departamento</button>
+    </header>
+    <main>
+        <table id="tabela" border="2">
+            <thead>
+                <tr>
+                    <th>Código Departamento</th>
+                    <th>Nome Departamento</th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr id="linha" class="model">
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div class="modal model">
+        <div class="form-modal">
+            <button class="fechar" onclick="fecharModal()">X</button>
+            <div class="linhazas">
+                <input type="number" id="codDep" placeholder="Código">
+                <button id="botCad" onclick="deletar()">Excluir</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script/script.js"></script>
+</html>
+
+<!-- listar departamentos
+excluir dep
+listar prod
+cad prod
+cad soli -->

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif; 
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color:#EEF1FF;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 15px;
+}
+
+li{
+    padding: 15px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
+
+#delDep{
+    width: 170px;
+    height: 60px;
+    padding: 5px;
+    margin: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+
+#tabela{
+    border-collapse: collapse;
+    width: 30%;
+}
+
+#tabela td, #tabela th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tabela tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tabela tr:hover {background-color: #ddd;}
+  
+  #tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #D2DAFF;
+    color: white;
+  }
+
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+}
+
+.form-modal{
+    width: 15%;
+    height: 20%;
+    background-color: #FFF;
+    border-radius: 20px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 120px;
+}
+
+.fechar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    padding: 5px;
+    background: none;
+    border:none;
+    color: #000;
+    font-size: 14px;
+}
+
+#codDep{
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+}
+
+#botCad{
+    margin-top: 10px;
+    width: 80px;
+    height: 20px;
+}
+
+.model{
+    display: none;
+    visibility: hidden;
+}
