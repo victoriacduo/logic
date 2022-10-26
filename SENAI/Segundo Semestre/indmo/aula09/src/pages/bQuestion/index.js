@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 
-export default function segunda({ routes, navigation }) {
-    const componente = () => {
+export default function Segunda({ navigation }) {
         const [checked, setChecked] = React.useState('first');
     
         const options = [
@@ -14,7 +13,7 @@ export default function segunda({ routes, navigation }) {
         ]
     
         return(
-             <View style={style.page}>
+            <View style={style.page}>
                 <View style={style.container}>
                     <Text style={style.pergunta}>Qual desses não é um instrumento meteorológico?</Text>
                     <View style={style.a}>
@@ -34,14 +33,13 @@ export default function segunda({ routes, navigation }) {
                         <Text>Anemômetro</Text>
                     </View>
                     <View style={style.e}>
-                        <TouchableOpacity style={style.botao}>
+                        <TouchableOpacity style={style.botao} onPress={() => {navigation.navigate("Terceira")}}>
                             <Text style={{ fontWeight: 'bold', color: 'white' }}>PRÓXIMA</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
             </View>
         )
-    }
 }
 
 const style = StyleSheet.create({
@@ -61,7 +59,7 @@ const style = StyleSheet.create({
         borderRadius: '20px',
     },
     pergunta: {
-        fontSize: '18px',
+        fontSize: '16px',
         fontWeight: 'bold'
     },
     a:{

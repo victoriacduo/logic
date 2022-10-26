@@ -2,34 +2,55 @@ import * as React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 
-export default function Primeira({ routes, navigation }) {
-        const [checked, setChecked] = React.useState('first');
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export default function Primeira({ navigation }) {
+        const [checked, setChecked] = React.useState("");
+        const [lida, setLida] = React.useState("");
+
+        const salvar = async () => {
+            try {
+                await AsyncStorage.setItem("resposta", checked);
+                setChecked("");
+            }catch(err) {
+                console.log(err);
+            }
+        }
+
+        const ler = async() => {
+            try {
+                let resposta = await AsyncStorage.getItem("resposta");
+                setLida(resposta);
+            }catch(err) {
+                console.log(err);
+            }
+        }
     
-        const options = [
-            { value: 'Pinguim' },
-            { value: 'Galinha' },
-            { value: 'Cegonha' },
-            { value: 'Peru' }
-        ]
+        // const options = [
+        //     { value: 'Pinguim' },
+        //     { value: 'Galinha' },
+        //     { value: 'Cegonha' },
+        //     { value: 'Peru' }
+        // ]
     
         return(
             <View style={style.page}>
                 <View style={style.container}>
                     <Text style={style.pergunta}>Qual dessas aves não voa?</Text>
                     <View style={style.a}>
-                        <RadioButton style={style.optoins} value="first" status= { checked === 'first' ? 'checked' : 'unchecked' } onPress={() => setChecked('first')}/>
+                        <RadioButton value="first" status= { checked === 'first' ? 'checked' : 'unchecked' } onPress={() => setChecked('first')}/>
                         <Text>Pinguim</Text>
                     </View>
                     <View style={style.b}>
-                        <RadioButton style={style.optoins} value="second" status= { checked === 'second' ? 'checked' : 'unchecked' } onPress={() => setChecked('second')}/>
+                        <RadioButton value="second" status= { checked === 'second' ? 'checked' : 'unchecked' } onPress={() => setChecked('second')}/>
                         <Text>Galinha</Text>
                     </View>
                     <View style={style.c}>
-                        <RadioButton style={style.optoins} value="third" status= { checked === 'third' ? 'checked' : 'unchecked' } onPress={() => setChecked('third')}/>
+                        <RadioButton value="third" status= { checked === 'third' ? 'checked' : 'unchecked' } onPress={() => setChecked('third')}/>
                         <Text>Cegonha</Text>
                     </View>
                     <View style={style.d}>
-                        <RadioButton style={style.optoins} value="fourth" status= { checked === 'fourth' ? 'checked' : 'unchecked' } onPress={() => setChecked('fourth')}/>
+                        <RadioButton value="fourth" status= { checked === 'fourth' ? 'checked' : 'unchecked' } onPress={() => setChecked('fourth')}/>
                         <Text>Peru</Text>
                     </View>
                     <View style={style.e}>
@@ -60,7 +81,7 @@ const style = StyleSheet.create({
         borderRadius: '20px',
     },
     pergunta: {
-        fontSize: '18px',
+        fontSize: '16px',
         fontWeight: 'bold'
     },
     a:{
