@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -18,27 +18,27 @@ export default function Um({ navigation }) {
     return(
         <View style={style.page}>
             <View style={style.container}>
-                <Text style={style.pergunta}>Qual desses não é um instrumento meteorológico?</Text>
+                <Text style={style.pergunta}>De que são constituídos os diamantes?</Text>
                 <View style={style.a}>
                     <RadioButton value="first" status= { checked === 'first' ? 'checked' : 'unchecked' } onPress={() => setChecked('first')}/>
-                    <Text>Barógrafo</Text>
+                    <Text>Carbono</Text>
                 </View>
                 <View style={style.b}>
                     <RadioButton value="second" status= { checked === 'second' ? 'checked' : 'unchecked' } onPress={() => setChecked('second')}/>
-                    <Text>Termômetro</Text>
+                    <Text>Grafite</Text>
                 </View>
                 <View style={style.c}>
                     <RadioButton value="third" status= { checked === 'third' ? 'checked' : 'unchecked' } onPress={() => setChecked('third')}/>
-                    <Text>Etilômetro</Text>
+                    <Text>Ósmio</Text>
                 </View>
                 <View style={style.d}>
                     <RadioButton value="fourth" status= { checked === 'fourth' ? 'checked' : 'unchecked' } onPress={() => setChecked('fourth')}/>
-                    <Text>Anemômetro</Text>
+                    <Text>Bóhrio</Text>
                 </View>
                 <View style={style.e}>
                     <Button style={style.botao} title="Proximo" onPress={() => {
                         let pontos = 0;
-                        if(checked === 'second') panGestureHandlerCustomNativeProps = 1;
+                        if(checked === 'first') pontos = 1;
 
                         storeData(checked);
 
@@ -50,7 +50,6 @@ export default function Um({ navigation }) {
     )
 
 }
-
 
 const style = StyleSheet.create({
     page: {

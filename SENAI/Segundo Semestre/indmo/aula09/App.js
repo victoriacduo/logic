@@ -4,15 +4,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-import PrimeiraTela from './src/pages/aQuestion/index';
-import SegundaTela from './src/pages/bQuestion/index';
+import Primeira from './src/pages/telas/a';
+import Segunda from './src/pages/telas/b';
 
 export default function App(){
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Primeira" component={PrimeiraTela}/>
-        <Stack.Screen name="Segunda" component={SegundaTela}/>
+        <Stack.Screen name="Um" component={Primeira}/>
+        <Stack.Screen name="Dois" component={Segunda}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

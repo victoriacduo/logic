@@ -3,13 +3,14 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-
-export default function Um({ navigation }) {
-    const [checked, setChecked] = useState("first");
+export default function Dois({navigation, route}) {
+    const [checked, setChecked] = useState("thrid");
 
     const storeData = async (value) => {
         try {
-            await AsyncStorage.setItem('resp', value);
+            const data = await AsyncStorage.getItem('resp');
+            
+            await AsyncStorage.setItem('resp', data + ";" + value);
         } catch (e) {
             console.log(e);
         }
@@ -38,19 +39,17 @@ export default function Um({ navigation }) {
                 <View style={style.e}>
                     <Button style={style.botao} title="Proximo" onPress={() => {
                         let pontos = 0;
-                        if(checked === 'second') panGestureHandlerCustomNativeProps = 1;
+                        if(checked === 'thrid') panGestureHandlerCustomNativeProps = 1;
 
                         storeData(checked);
 
-                        navigation.navigate("Dois", {"score":pontos});
+                        navigation.navigate("Tres", {"score":pontos});
                     }}/>
                 </View>
             </View>
         </View>
     )
-
 }
-
 
 const style = StyleSheet.create({
     page: {
